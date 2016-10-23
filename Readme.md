@@ -1,6 +1,7 @@
 # Учебный проект «Барбершоп»
 
 * Студент: [André Ko](https://up.htmlacademy.ru/htmlcss/15/user/264039).
+* Наставник: [Антон Попов](https://up.htmlacademy.ru/htmlcss/15/user/78239).
 
 ---
 
