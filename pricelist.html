@@ -3,41 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>Прайс-лист — Барбершоп «Бородинский»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&subset=cyrillic" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
 
 <!-- Header | L'en-tête -->
-    <header class="header-main">
-      <div class="container">
-        <a class="logo-small" href="index.html"><img src="img/logo-small.png" width="111" height="24" alt="Барбершоп «Бородинский»"></a>
-      </div>
-      <nav class="main-navigation">
-        <ul>
-          <li>
-            <a href="#">Информация</a>
-          </li>
-          <li>
-            <a href="#">Новости</a>
-          </li>
-          <li>
-            <a class="main-navigation-active">Прайс-лист</a>
-          </li>
-          <li>
-            <a href="catalog.html">Магазин</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="block-user">
-        <a class="login" href="#">Вход</a>
+    <header class="header-inner">
+      <div class="container clearfix">
+        <nav class="navigation-main">
+         <a class="logo-small" href="index.html"><img src="img/logo-small.png" width="111" height="24" alt="Барбершоп «Бородинский»"></a>
+          <ul>
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Новости</a>
+            </li>
+            <li>
+              <a class="active">Прайс-лист</a>
+            </li>
+            <li>
+              <a href="catalog.html">Магазин</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="block-user">
+          <a class="login" href="#">Вход</a>
+        </div>
       </div>
     </header>
 
 <!-- Main content block | Le bloc principal de teneur -->
-    <main class="container">
+    <main class="container clearfix">
 <!-- Heading and nav section | Le titre et la section de navigation -->
       <div class="heading-section">
         <h1 class="heading-title">Прайс-лист</h1>
@@ -55,8 +57,8 @@
         <h2>Истинно мужская классика</h2>
       </div>
 
-      <div class="inner-content">
-        <div class="inner-content-column">
+      <div class="clearfix">
+        <div class="inner-content-left">
         <h2 class="inner-content-title">Мы используем только лучшие средства:</h2>
     			<ul class="inner-content-features">
             <li>Baxter of California</li>
@@ -66,8 +68,8 @@
           </ul>
         </div>
 
-        <div class="inner-content-column">
-          <h2 class="inner-content-title">Цены на услуги наших мастеров:</h2>
+        <div class="inner-content-right">
+          <h2 class="inner-content-title">Цены на услуги наших&nbsp;мастеров:</h2>
           <div class="inner-content-table">
             <div class="inner-content-row">
               <div class="inner-content-cell">
@@ -95,24 +97,27 @@
             </div>
           </div>
         </div>
+      </div>
 
-
+      <div class="clearfix">
         <h3 class="inner-content-title">Несколько слов о нас:</h3>
-        <div class="inner-content-column">
-          <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас – это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
+        <div class="inner-content-left">
+
+          <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это&nbsp;уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
         </div>
-        <div class="inner-content-column">
+        <div class="inner-content-right">
            <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь Вы можете погрузиться в удобную для Вас атмосферу, чувствовать себя комфортно и свободно!</p>
         </div>
+      </div>
     </main>
 
 <!-- Footer | Le pied de la page -->
     <footer class="footer-main">
-      <div class="container">
+      <div class="container clearfix">
         <div class="footer-contacts">
           Барбершоп «Бородинский»<br>
-          Адрес: г. Санкт-Петербург, Б. Конюшенная, д.19/8<br>
-          <a href="#">Как нас найти?</a>
+          Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+          <a class="footer-link" href="#">Как нас найти?</a><br>
           Телефон: +7 (812) 666-02-66
         </div>
         <div class="footer-social">
