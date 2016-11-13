@@ -39,6 +39,7 @@ h3 {
 /*fonts unification */
 body,
 .btn,
+.login-form input,
 .appointment-form input {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 14px;
@@ -128,7 +129,7 @@ a,
 
 .navigation-main {
   float: left;
-  min-width: 780px;
+  min-width: 825px;
 }
 
 .navigation-main ul {
@@ -151,6 +152,7 @@ a,
   padding: 26px 20px;
   color: #ffffff;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .navigation-main a:hover,
@@ -160,7 +162,6 @@ a,
 
 .navigation-main .active {
   position: relative;
-  background-color: none;
 }
 
 .navigation-main .active::after {
@@ -283,11 +284,11 @@ a,
 
 .gallery {
   position: relative;
-  height: 260px;
+  line-height: 0;
 }
 
 .gallery-content {
-  height: 164px;
+  height: auto;
   margin: 0 0 38px 0;
   border: 7px solid #ffffff;
   background-color: #cccccc;
@@ -295,7 +296,7 @@ a,
 
 .gallery-content img {
   width: 286px;
-  height: 164px;
+  height: auto;
 }
 
 a.btn-gallery-prev,
@@ -310,7 +311,9 @@ a.btn-contact-right {
   text-align: center;
   background-color: #000;
   color: #ffffff;
+  line-height: 24px;
 }
+
 a.btn-gallery-prev:hover,
 a.btn-gallery-next:hover,
 a.btn-contact-left:hover,
@@ -319,13 +322,12 @@ a.btn-contact-right:hover {
 }
 
 a.btn-gallery-prev {
-  position: absolute;
-  left: 0;
+  float: left;
 }
 
 a.btn-gallery-next {
-  position: absolute;
-  right: 0;
+  float: right;
+  
 }
 
 .btn-contact-left {
@@ -372,8 +374,7 @@ input:focus {
   margin-top: 30px;
   padding-top: 60px;
   padding-bottom: 40px;
-  background: #262626 url("../img/bg-pattern-dark.png");
-  box-shadow: inset 0px 30px 40px -15px #00000;
+  background: #242424 url("../img/bg-pattern-dark.png");
   color: #ffffff;
 }
 
@@ -477,12 +478,151 @@ input:focus {
   color: #000000;
   background-color: #ffffff;
 }
+
+.modal-content {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  display: none;
+  margin-left: -230px;
+  width: 300px;
+  padding: 50px 80px;
+  color: #000000;
+  background: #f8f3f0 url("../img/bg-pattern-light.jpg");
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 6px;
+  right: -31px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 22px;
+  height: 4px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-content p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.modal-content-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -280px;
+  margin-left: -390px;
+  z-index: 20;
+  width: 766px;
+  height: 561px;
+  background: #e9e5dc url("../img/static-map.jpg") no-repeat 50% 50%;
+  border: 7px solid white;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 241px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  padding-right: 40px;
+  text-transform: uppercase;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+  outline: 0;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-form input.icon-user {
+  background-image: url("../img/iconset.png");
+  background-repeat: no-repeat;
+  background-position: 100% -504px;
+}
+
+.login-form input.icon-password {
+  background-image: url("../img/iconset.png");
+  background-repeat: no-repeat;
+  background-position: 100% -45px;
+}
+
+.login-form .restore {
+  float: right;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.login-form .restore:hover {
+  float: right;
+  color: #000000;
+  text-decoration: none;
+}
+
+.login-form .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.login-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
 /*the end of the index page css */
 
 /* inner pages styles */
 
 .footer-inner {
   margin-top: 15px;
+  box-shadow: inset 0px 21px 40px -15px #000000;
 }
 
 .inner-page {
@@ -740,15 +880,18 @@ h3.inner-content-title {
   vertical-align: top;
 }
 
+.login-checkbox:hover,
 .checkbox-filter:hover {
   color: #663d15;
 }
 
+.login-form input[type="checkbox"],
 .filter-producer input[type="checkbox"],
 .filter-type input[type="radio"] {
   display: none;
 }
 
+.login-checkbox input[type="checkbox"] + .checkbox-imitation,
 .filter-producer input[type="checkbox"] + .checkbox-imitation {
   position: absolute;
   top: 50%;
@@ -759,6 +902,8 @@ h3.inner-content-title {
   border: 2px solid #000000;
 }
 
+.login-checkbox input[type="checkbox"]:checked + .checkbox-imitation::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-imitation::after,
 .filter-producer input[type="checkbox"]:checked + .checkbox-imitation::before,
 .filter-producer input[type="checkbox"]:checked + .checkbox-imitation::after {
   content: "";
@@ -806,10 +951,12 @@ h3.inner-content-title {
   margin-bottom: 33px;
 }
 
+.login-checkbox input[type="checkbox"]:checked + .checkbox-imitation::before,
 .checkbox-filter input[type="checkbox"]:checked + .checkbox-imitation::before {
   transform: rotate(45deg);
 }
 
+.login-checkbox input[type="checkbox"]:checked + .checkbox-imitation::after,
 .checkbox-filter input[type="checkbox"]:checked + .checkbox-imitation::after {
   transform: rotate(-45deg);
 }
@@ -844,6 +991,11 @@ h3.inner-content-title {
 .item-price {
   margin: 0 0 16px 16px;
   font-size: 0;
+}
+
+.catalog-item-details img {
+  width: 220px;
+  height: 165px;
 }
 
 .catalog-item-details h4 {
@@ -974,4 +1126,9 @@ a.catalog-item-details:hover {
 
 p.product-description {
   margin-bottom: 35px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

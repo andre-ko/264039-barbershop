@@ -32,7 +32,7 @@
           </ul>
         </nav>
           <div class="block-user">
-            <a class="login" href="#">Вход</a>
+            <a class="login" href="login.html">Вход</a>
           </div>
         </div>
     </header>
@@ -78,7 +78,7 @@
           <h2 class="index-content-title">Фотогалерея</h2>
           <div class="gallery">
             <figure class="gallery-content">
-              <img class="photo-img" src="img/photo-1.jpg" width="264" height="164" alt="Интерьер барбершопа «Бородинский»">
+              <img class="photo-img" src="img/photo-1.jpg" width="286" height="164" alt="Интерьер барбершопа «Бородинский»">
             </figure>
             <a class="btn-gallery-prev" href="#">Назад</a>
             <a class="btn-gallery-next" href="#">Вперёд</a>
@@ -122,7 +122,7 @@
         <div class="footer-contacts">
           Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-          <a href="#">Как нас найти?</a><br>
+          <a href="map.html">Как нас найти?</a><br>
           Телефон: +7 (812) 666-02-66
         </div>
         <div class="footer-social">
@@ -137,5 +137,29 @@
         </div>
       </div>
     </footer>
+    <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <h2 class="modal-content-title">Личный кабинет</h2>
+      <p>Введите свой логин и пароль.</p>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <input class="icon-user" type="text" name="login" placeholder="Логин">
+        <input class="icon-password" type="password"  name="password" placeholder="Пароль">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember">
+          <span class="checkbox-imitation"></span>
+          Запомните меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль!</a>
+        <button class="btn" type="submit">Войти</button>
+      </form>
+    
+    <div class="modal-content-map">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <div id="yandex-map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=En1lAW7YlGKaU-c9khDoeRX50lLlKyIp&amp;width=766&amp;height=561&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+    </div>
   </body>
 </html>
